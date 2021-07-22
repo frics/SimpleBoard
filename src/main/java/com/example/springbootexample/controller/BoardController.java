@@ -77,8 +77,7 @@ public class BoardController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return new ResponseEntity<>(String.valueOf(params), HttpStatus.OK);
+        return new ResponseEntity<>("register failed", HttpStatus.SERVICE_UNAVAILABLE);
     }
 
     @PostMapping("/update")
