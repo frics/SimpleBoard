@@ -13,25 +13,36 @@ import java.time.LocalDateTime;
 @Setter
 public class BoardDTO {
     private Long idx;
+
     private String title;
+
     private String content;
+
     private String writer;
+
     private int viewCnt;
+
     private String noticeYn;
+
     private String secretYn;
+
     private String deleteYn;
+
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime insertTime;
+
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+
     private LocalDateTime updateTime;
+
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime deleteTime;
 
     @Override
-    public String toString(){
+    public String toString() {
         String s = "title : " + title + "\n"
                 + "content : " + content + "\n"
                 + "writer : " + writer + "\n";

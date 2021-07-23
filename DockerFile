@@ -1,0 +1,12 @@
+
+
+FROM java:8
+
+LABEL maintainer="frics9711@gmail.com"
+
+VOLUME /tmp
+
+EXPOSE 8080
+
+ARG JAR_FILE=build/libs/
+
